@@ -46,12 +46,13 @@ html {
 }
 
 body {
+    height: 100%;
     margin: 0;
     overflow: hidden;
 }
 
 main {
-    height: 100vh;
+    height: 100%;
     position: relative;
 }
 
@@ -121,12 +122,13 @@ this class is set by Javascript to force it */
     right: 50%;
     transform: translate(50%, -50%);
     text-decoration: none;
-    color: white;
+    color: #93d2ff;
     pointer-events: none;
+    opacity: 0;
 }
 
 .githubLink:hover{
-    color: #93d2ff;
+    opacity: 1;
 }
 
 /*
