@@ -1,0 +1,140 @@
+/*
+    CSS animations. These are in two parts.
+    Each requires a keyframe stating what CSS property you want
+    the element to start with, and what you want it to end with.
+    Then that animation can be added to a CSS class, which further
+    specifies how long the animation should last and whether the end 
+    state should be permanent or it should revert to its original state. 
+*/
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeInThenOut {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeInThenOut {
+    animation-name: fadeInThenOut;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+/* styling starts here */
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+main {
+    height: 100vh;
+    position: relative;
+}
+
+/* 
+    Any p tags within the main tag get this styling.
+*/
+main p {
+    text-align: center;
+    margin: 0;
+    font-family: 'KoHo', sans-serif;
+    font-size: x-large;
+    letter-spacing: 0.5px;
+}
+
+/* 
+    this class puts the element in the middle of the screen
+    so long as it's within a relative element.
+    (In this case that's the 'main' tag)
+*/
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* font-size 14vw (viewwidth) keeps the font size looking nice on
+different size screen. This is scrapped later on for desktop */
+button {
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    border: 8px solid #5e86a3;
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    background-color: #93d2ff;
+    color: white;
+    font-size: 14vw;
+    outline: none;
+}
+
+/* A firefox specific instruction to prevent dotted links turning 
+up on the button when it's been clicked. Chrome uses the 'outline: none' 
+instruction listed above */
+button::-moz-focus-inner {
+   border: 0;
+}
+
+button:hover {
+    color: #f5ae16;
+    border-color: #395263;
+    background-color: #5e86a3;
+}
+
+/* Once the animation started I wanted the hover styling to remain, so
+this class is set by Javascript to force it */
+.buttonActive {
+    color: #f5ae16;
+    border-color: #395263;
+    background-color: #5e86a3;
+    cursor: initial;
+}
+
+/* Hidden github link */
+.githubLink {
+    position: fixed;
+    bottom: 2%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-decoration: none;
+    color: white;
+    pointer-events: none;
+}
+
+.githubLink:hover{
+    color: #93d2ff;
+}
+
+/*
+    This line only kicks in if a screen is 600px or more wide.
+    CSS should be designed for mobile first, then desktop adjustments 
+    like the below after.
+*/
+@media only screen and (min-width: 600px) {
+    button {
+        font-size: 80px;
+    }
+    .githubLink {
+        pointer-events: initial;
+    }
+}

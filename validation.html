@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+  HTML files give information about the page (including links to the CSS and 
+  javascript) alongside often providing its initial structure and content.
+
+  Everything is nestled between tags.
+-->
+<html>
+  <head>
+    <!-- 
+      The head section contains information about the page, including encoding,
+      viewport, page title, links to css files and fonts and search engine +
+      social media information.
+     -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="validation-place-logo.png">
+    <title>Validation Place | A place for validation</title>
+
+    <!-- The following meta tags are all for social media -->
+    <meta property="og:title" content="Validation Place">
+    <meta property="og:description" content="A place for validation.">
+    <meta property="og:image" content="https://validation.place/validation-place-social.png">
+    <meta property="og:url" content="https://validation.place">
+    <meta property="og:site_name" content="Validation Place">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="An image that says 'Validation Place'">
+    <meta name="twitter:site" content="@DramaLlamaNite">
+
+    <!-- fonts. Google fonts is a great place to find a wide variety -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo&display=swap" rel="stylesheet">
+
+    <!-- 
+      this is the link to the site's CSS file.
+      CSS (casading style sheets) is how sites get their colours, shapes, placements
+      and (increasibly often) animations. 
+    -->
+    <link rel="stylesheet" type="text/css" href="validation.css">
+  </head>
+  <body>
+    <!-- the structure for the page the user sees starts here in the body tag -->
+    <main>
+      <!-- 
+        this is the validation button. 
+        How it looks and acts is dictated by CSS and Javascript
+        'class=center' refers to CSS too. Any HTML element given that CSS
+        class will get the same styling.
+      -->
+      <button class='center'>validate</button>
+    </main>
+
+    <a class='githubLink' href='https://github.com/DramaLlamaNite/ValidationPlace'>View the Code on GitHub</a>
+
+    <!-- 
+      The Javascript file link. This could have gone in the head with the CSS link
+      but best practice dictates putting it at the bottom of the body tag for page
+      loading purposes
+    -->
+    <script src="validation.js"></script> 
+  </body>
+</html>
