@@ -45,10 +45,10 @@ function validate(message){
     message++;
     if(responses.length == message){
         // once the message run out the button is restored.
-        setTimeout(restoreValidationBtn, 8000);
+        setTimeout(restoreValidationBtn, 9000);
         return;
     }
-    setTimeout(function(){validate(message);}, 6000);
+    setTimeout(function(){validate(message);}, 7400);
 }
 
 function changeMessage(text){
