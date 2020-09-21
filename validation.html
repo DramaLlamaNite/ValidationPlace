@@ -37,8 +37,11 @@
       this is the link to the site's CSS file.
       CSS (casading style sheets) is how sites get their colours, shapes, placements
       and (increasibly often) animations. 
+      Adding the date to the end of the file location and adjusting it
+      when it is edited will force sites to reload their caches so 
+      users get the new styles
     -->
-    <link rel="stylesheet" type="text/css" href="validation.css">
+    <link rel="stylesheet" type="text/css" href="validation.css?v=20200921">
   </head>
   <body>
     <!-- the structure for the page the user sees starts here in the body tag -->
@@ -59,6 +62,6 @@
       but best practice dictates putting it at the bottom of the body tag for page
       loading purposes
     -->
-    <script src="validation.js"></script> 
+    <script src="validation.js?v=20200921"></script> 
   </body>
 </html>
